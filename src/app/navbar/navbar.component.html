@@ -1,0 +1,20 @@
+<div class="example-container">
+    <mat-toolbar color="primary" class="example-toolbar">
+      <h1 class="example-app-name m-2">Stock Management System</h1>
+      <span class="ms-auto" mat-icon-button *ngIf="!loggedIn" routerLink="/login"><a mat-raised-button color="primary">Logout</a></span>
+      <span class="ms-auto" mat-icon-button *ngIf="loggedIn" (click)="logout()"><a mat-raised-button color="primary">Logout</a></span>
+    </mat-toolbar>
+  
+    <mat-sidenav-container class="example-sidenav-container">
+        <mat-sidenav #snav [mode]="'side'"
+        fixedTopGap="56" opened>         
+        <mat-nav-list class="px-2">
+          <a class="p-4 border-primary border-top border-bottom" mat-list-item routerLink="/stocks" >Stock List</a>
+        </mat-nav-list>
+      </mat-sidenav>
+      
+      <mat-sidenav-content>
+        <router-outlet></router-outlet>
+      </mat-sidenav-content>
+    </mat-sidenav-container>
+  </div>

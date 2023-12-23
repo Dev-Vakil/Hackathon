@@ -25,7 +25,7 @@ export class AuthenticationService {
 
   isLoggedIn(){
     let token = localStorage.getItem("token");
-    if(token == null || token == undefined || token == ""){
+    if(token === null || token === undefined || token === ''){
       return false;
     }else{
       return true;

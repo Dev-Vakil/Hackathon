@@ -3,8 +3,11 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import {MatButtonModule} from '@angular/material/button';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatInputModule} from '@angular/material/input';
 import { MatTableModule } from '@angular/material/table';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatListModule} from '@angular/material/list';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
@@ -16,6 +19,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { RegisterComponent } from './register/register.component';
 import { StockListComponent } from './stock-list/stock-list.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 @NgModule({
@@ -23,7 +27,8 @@ import { StockListComponent } from './stock-list/stock-list.component';
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    StockListComponent
+    StockListComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +36,10 @@ import { StockListComponent } from './stock-list/stock-list.component';
     MatButtonModule,
     MatFormFieldModule,
     MatInputModule,
+    MatToolbarModule,
     MatTableModule,
+    MatListModule,
+    MatSidenavModule,
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,

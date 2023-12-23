@@ -37,7 +37,7 @@ export class LoginComponent implements OnInit{
           window.location.href="/user/0/dashboard";          
         }
         else{
-          window.location.href="/admin/provider-list";   
+          // window.location.href="/admin/provider-list";   
         }
       },
       (error:any)=>{
