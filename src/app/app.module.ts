@@ -20,6 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { RegisterComponent } from './register/register.component';
 import { StockListComponent } from './stock-list/stock-list.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { IpoListComponent } from './components/ipo-list/ipo-list.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { NavbarComponent } from './navbar/navbar.component';
     LoginComponent,
     RegisterComponent,
     StockListComponent,
-    NavbarComponent
+    NavbarComponent,
+    IpoListComponent
   ],
   imports: [
     BrowserModule,

@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { StockListComponent } from './stock-list/stock-list.component';
+import { IpoListComponent } from './components/ipo-list/ipo-list.component';
 
 const routes: Routes = [
   { path:'', redirectTo:'/login', pathMatch:'full'},
@@ -10,6 +11,7 @@ const routes: Routes = [
   // { path:'login',component:LoginComponent ,pathMatch:'full', canActivate:[!authGuard]},
   { path:'register',component:RegisterComponent ,pathMatch:'full'},
   { path:'stocks',component:StockListComponent ,pathMatch:'full'},
+  { path:'ipos',component:IpoListComponent ,pathMatch:'full'},
 
 ];
 

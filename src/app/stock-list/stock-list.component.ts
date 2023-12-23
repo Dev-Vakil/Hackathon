@@ -3,6 +3,7 @@ import { Component, ViewChild } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
 import { StockService } from '../service/stock.service';
 import { MatSort } from '@angular/material/sort';
+import { AuthenticationService } from '../service/authentication.service';
 
 export interface Stocks {
   company: string;
@@ -16,7 +17,9 @@ export interface Stocks {
   styleUrls: ['./stock-list.component.css']
 })
 export class StockListComponent {
-  displayedColumns: string[] = ['company', 'ltp', 'cp'];
+  isLogin:boolean = false;
+ 
+  displayedColumns: string[] = ['company', 'ltp', 'cp','action'];
   dataSource !:MatTableDataSource<Stocks>;
   // ELEMENT_DATA!: Stocks[]; 
   ELEMENT_DATA : Stocks[] = [    
@@ -27,7 +30,8 @@ export class StockListComponent {
   ];
 
   
-  constructor(private _liveAnnouncer: LiveAnnouncer, public stockService:StockService) {   
+  constructor(private _liveAnnouncer: LiveAnnouncer, public stockService:StockService, authService: AuthenticationService) {   
+  this.isLogin = authService.isLoggedIn();
   } 
 
   @ViewChild(MatSort) sort!: MatSort;
